@@ -156,6 +156,17 @@ public class AllVolunteerViewController implements Initializable, ControllerClas
     }
     
     /**
+     * This will take the user to a breakdown of hours worked per month
+     */
+    public void viewHoursPerMonthButtonPushed(ActionEvent event) throws IOException
+    {
+        SceneChanger sc = new SceneChanger();
+        sc.changeScene(event, "MonthView.fxml", "Hours Per Month");
+        
+    }
+    
+    
+    /**
      * This will enable the edit button once a volunteer is selected in the table
      */
     public void volunteerSelected()

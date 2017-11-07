@@ -10,18 +10,6 @@ import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
  
 public class SHAPasswordGenerator {
-     
-   /* public static void main(String[] args) throws NoSuchAlgorithmException {
-        String passwordToHash = "password";
-        byte[] salt = getSalt();
-         
-        for (int count = 1; count <= 5 ; count++)
-        {
-            String securePassword = get_SHA_512_SecurePassword(passwordToHash, salt);
-            System.out.println(securePassword);
-            System.out.printf("Length: %d%n%n", securePassword.length());    
-        }
-    }*/
     
     public static String get_SHA_512_SecurePassword(String passwordToHash, byte[] salt)
     {
@@ -48,7 +36,9 @@ public class SHAPasswordGenerator {
     //Add salt
     public static byte[] getSalt() throws NoSuchAlgorithmException
     {
-        SecureRandom sr = SecureRandom.getInstance("SHA1PRNG");
+        //create a SecureRandon instance using the SHA1PRNG alogorithm
+        //SecureRandom sr = SecureRandom.getInstance("SHA1PRNG");
+        SecureRandom sr = SecureRandom.getInstanceStrong();  //beter than SHA1PRNG which can be deterministic on windows machines
         byte[] salt = new byte[16];
         sr.nextBytes(salt);
         return salt;

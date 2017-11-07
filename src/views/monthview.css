@@ -1,0 +1,16 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.chart-bar{
+    -fx-bar-fill: blue;
+}
+
+.header{
+    -fx-font-size: 36pt;
+}
+

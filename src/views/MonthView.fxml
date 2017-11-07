@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.MonthViewController">
+    <stylesheets>
+        <URL value="@monthview.css" />
+    </stylesheets>
+   <children>
+      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label styleClass="header" text="Hours Worked" />
+            <BarChart fx:id="barChart">
+              <xAxis>
+                <CategoryAxis fx:id="monthAxis" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="hoursAxis" side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

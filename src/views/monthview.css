@@ -6,8 +6,21 @@
 
 }
 
+/*
 .chart-bar{
     -fx-bar-fill: blue;
+}
+*/
+
+/* set the first series in the barchart to blue */
+.default-color0.chart-bar { 
+     -fx-bar-fill: blue;
+}
+
+
+/* set the second series in the barchart to red */
+.default-color1.chart-bar {
+    -fx-bar-fill: red;
 }
 
 .header{

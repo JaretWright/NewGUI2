@@ -63,7 +63,6 @@ public class MonthViewController implements Initializable {
         
         displaySeriesContents(lastYearSeries);
         
-        
         barChart.getData().addAll(lastYearSeries);
         barChart.getData().addAll(currentYearSeries);
     }    
